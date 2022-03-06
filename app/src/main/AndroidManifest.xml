@@ -10,6 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CopenhagenAdd">
         <activity
+            android:name=".ThankYouActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InstructionsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GambleInstructionsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GambleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ExperimentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ConsentActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
