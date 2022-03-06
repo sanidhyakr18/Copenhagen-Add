@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "13216667221",
+    "firebase_url": "https://copenhagen-94614-default-rtdb.firebaseio.com",
+    "project_id": "copenhagen-94614",
+    "storage_bucket": "copenhagen-94614.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:13216667221:android:74b7274b4a3bbd2debe6dc",
+        "android_client_info": {
+          "package_name": "com.sandystudios.copenhagen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "13216667221-3gdiq781ti0vcssdu1v5qt6m8pc8i418.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7cIeS8CtS9uF7khKQr38tNEt9v20S_4U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "13216667221-3gdiq781ti0vcssdu1v5qt6m8pc8i418.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:13216667221:android:580b0e02479f00c2ebe6dc",
+        "android_client_info": {
+          "package_name": "com.sandystudios.copenhagen_add"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "13216667221-3gdiq781ti0vcssdu1v5qt6m8pc8i418.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7cIeS8CtS9uF7khKQr38tNEt9v20S_4U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "13216667221-3gdiq781ti0vcssdu1v5qt6m8pc8i418.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

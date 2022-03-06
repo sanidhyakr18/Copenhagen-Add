@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Decisive - Part B</string>
+    <string name="start">START</string>
+    <string name="consent">I have read the details mentioned above and give my consent to participate in the study.</string>
+    <string name="the_copenhagen_experiment">The Copenhagen Experiment</string>
+    <string name="please_provide_your_name_and_age">Please provide your name and age.</string>
+    <string name="name">Name</string>
+    <string name="age">Age</string>
+    <string name="click_here">CLICK HERE to read the Consent Form.</string>
+    <string name="hello_world">Hello World</string>
+    <string name="instructions_PP">Instructions - Passive Phase</string>
+    <string name="instructions_AP">Instructions - Active Phase</string>
+    <string name="consent_form">Consent Form</string>
+    <string name="okay_i_got_it">Okay, I got it!</string>
+    <string name="initial_amount">Initial Amount:</string>
+    <string name="new_amount">New Amount</string>
+    <string name="symbol">Symbol</string>
+    <string name="finish">FINISH</string>
+</resources>
