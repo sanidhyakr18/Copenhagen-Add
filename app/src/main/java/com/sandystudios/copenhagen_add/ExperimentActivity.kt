@@ -41,7 +41,7 @@ class ExperimentActivity : AppCompatActivity() {
     private var isImage = false
     private var num = 0
     private var repeat = 0
-    private var shuffle = 0
+    private var shuffle = 4
     private var amount = 1000
 
     private var mResources = intArrayOf(
