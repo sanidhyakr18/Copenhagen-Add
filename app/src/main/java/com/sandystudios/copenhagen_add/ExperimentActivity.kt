@@ -26,6 +26,10 @@ class ExperimentActivity : AppCompatActivity() {
         findViewById(R.id.tv_amount)
     }
 
+    private val tvCompleted: TextView by lazy {
+        findViewById(R.id.tv_completed)
+    }
+
     private val ivImage: ShapeableImageView by lazy {
         findViewById(R.id.iv_image)
     }
@@ -41,10 +45,17 @@ class ExperimentActivity : AppCompatActivity() {
     private var isImage = false
     private var num = 0
     private var repeat = 0
-    private var shuffle = 4
+    private var shuffle = 2
     private var amount = 1000
 
     private var mResources = intArrayOf(
+        R.drawable.img1,
+        R.drawable.img4,
+        R.drawable.img7,
+        R.drawable.img9
+    )
+
+    private var mResources2 = intArrayOf(
         R.drawable.img1,
         R.drawable.img2,
         R.drawable.img3,
@@ -62,6 +73,8 @@ class ExperimentActivity : AppCompatActivity() {
     private lateinit var age: String
 
     private var i = 0
+    private var completed = 0
+    private var total = 37
 
     private var finalBtnPress = false
 
@@ -88,13 +101,16 @@ class ExperimentActivity : AppCompatActivity() {
 
         mResources.shuffle()
 
+        val str = "Completed: $completed/$total"
+        tvCompleted.text = str
+
         btnNext.isEnabled = false
 
         progressBar(2000)
 
         btnNext.setOnClickListener {
             btnNext.isEnabled = false
-            if (num == 9) {
+            if (num == 4) {
                 if (shuffle == 0) {
                     if (!finalBtnPress) {
                         finalBtnPress = true
@@ -125,8 +141,11 @@ class ExperimentActivity : AppCompatActivity() {
         if (!isImage) {
             tvHeading.text = getString(R.string.new_amount)
             tvAmount.text = amount.toString()
+            val str = "Completed: $completed/$total"
+            tvCompleted.text = str
         } else {
             tvHeading.text = getString(R.string.symbol)
+            completed++
         }
 
         tvAmount.isVisible = !isImage
@@ -134,10 +153,10 @@ class ExperimentActivity : AppCompatActivity() {
         btnNext.visibility = if (isImage) View.INVISIBLE else View.VISIBLE
 
         if (isImage) {
-            mResources.shuffle()
-            ivImage.setImageResource(mResources[0])
-            amount += hashMap[mResources[0]]!!
-            Log.d(ContentValues.TAG, "${hashMap[mResources[0]]} - $amount")
+            mResources2.shuffle()
+            ivImage.setImageResource(mResources2[0])
+            amount += hashMap[mResources2[0]]!!
+            Log.d(ContentValues.TAG, "${hashMap[mResources2[0]]} - $amount")
         } else {
             tvHeading.text = "Final Amount"
             btnNext.text = getString(R.string.finish)
@@ -161,14 +180,17 @@ class ExperimentActivity : AppCompatActivity() {
                 repeat = 0
                 num++
             }
+            val str = "Completed: $completed/$total"
+            tvCompleted.text = str
         } else {
             tvHeading.text = getString(R.string.symbol)
+            completed++
         }
 
         tvAmount.isVisible = !isImage
         ivImage.isVisible = isImage
         btnNext.visibility = if (isImage) View.INVISIBLE else View.VISIBLE
-        if (isImage && num < 9) {
+        if (isImage && num < 4) {
             ivImage.setImageResource(mResources[num])
             amount += hashMap[mResources[num]]!!
             Log.d(ContentValues.TAG, "${hashMap[mResources[num]]} - $amount")
